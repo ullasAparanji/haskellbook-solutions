@@ -1,0 +1,12 @@
+Given type signature determine kind of each type variable:
+
+1. a -> a
+Kind of a :: *
+
+2. a -> b a -> T (b a)
+Kind of a :: *
+Kind of b :: * -> *
+Kind of T :: * -> *
+
+3. c a b -> c b a
+Kind of c :: * -> * -> *
